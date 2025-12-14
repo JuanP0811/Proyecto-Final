@@ -606,8 +606,8 @@ st.plotly_chart(fig_box, use_container_width=True)
 
 # ---- STORYTELLING debajo del gráfico ----
 st.markdown("""
-📦 Los rangos bajos (0%–20%) mantienen una rentabilidad más predecible y saludable con una dispersión reducida y un riesgo mínimo de generar pérdidas. Esto sugiere que las ventas en estos rangos se realizan bajo una estructura de precios saludable y controlada.  
-📦 A partir del rango 20–40%, la situación cambia de forma drástica. La distribución del margen se desplaza por debajo del punto de equilibrio
+- Los rangos bajos (0%–20%) mantienen una rentabilidad más predecible y saludable con una dispersión reducida y un riesgo mínimo de generar pérdidas. Esto sugiere que las ventas en estos rangos se realizan bajo una estructura de precios saludable y controlada.  
+- A partir del rango 20–40%, la situación cambia de forma drástica. La distribución del margen se desplaza por debajo del punto de equilibrio
 En los rangos de descuento más agresivos (40–60% y 60–100%) la totalidad de las ventas se realiza con pérdidas, además de mostrar una mayor dispersión y profundidad negativa del margen. 
 
 ##### Los descuentos agresivos pueden elevar el volumen vendido, pero erosionan el margen.""")
@@ -616,7 +616,7 @@ En los rangos de descuento más agresivos (40–60% y 60–100%) la totalidad de
 st.markdown("---")
 
 # ---- GRÁFICO 6: Top 10 productos por venta (treemap) ----
-st.subheader("La rentabilidad se concentra en pocos productos, principalmente en Technology")
+st.subheader("La rentabilidad se concentra en pocos productos, principalmente en Technology en el apartado de Copiers")
 
 prod_group = (
     filtered
