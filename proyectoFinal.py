@@ -293,11 +293,14 @@ fig_sub.add_vline(x=0, line_width=1, line_dash="dash", line_color="#78909C")
 
 # Quitar rejillas verticales fuertes y ajustar ejes
 fig_sub.update_xaxes(
-    showgrid=True,
-    gridwidth=0.5,
-    gridcolor="#455A64",
+    showgrid=False,
     zeroline=False,
     tickformat="$,.0f"
+)
+
+fig_sub.update_yaxes(
+    showgrid=False,
+    zeroline=False
 )
 
 
@@ -405,6 +408,7 @@ fig_time_sales.add_annotation(
 fig_time_sales.update_xaxes(
     showgrid=False,
     zeroline=False,
+    title="",
     title_font=dict(size=14, family="Arial", weight="bold"),
     tickformat="%b %Y"   # <-- Muestra "Jan 2015", "Feb 2016", etc.
 )
@@ -412,6 +416,7 @@ fig_time_sales.update_xaxes(
 fig_time_sales.update_yaxes(
     showgrid=False,
     zeroline=False,
+    title="",
     title_font=dict(size=14, family="Arial", weight="bold")
 )
 
@@ -456,6 +461,7 @@ fig_time_profit.add_annotation(
 fig_time_profit.update_xaxes(
     showgrid=False,
     zeroline=False,
+    title="",
     title_font=dict(size=14, family="Arial", weight="bold"),
     tickformat="%b %Y"
 )
@@ -463,6 +469,7 @@ fig_time_profit.update_xaxes(
 fig_time_profit.update_yaxes(
     showgrid=False,
     zeroline=False,
+    title="",
     title_font=dict(size=14, family="Arial", weight="bold")
 )
 
@@ -529,8 +536,18 @@ fig_box.update_yaxes(range=[q1, q99])
 
 
 # Títulos y estilo
-fig_box.update_xaxes(title="Rango de descuento", title_font=dict(size=16, family="Arial"))
-fig_box.update_yaxes(title="Margen de utilidad", title_font=dict(size=16, family="Arial"))
+fig_box.update_xaxes(
+    title="Rango de descuento",
+    title_font=dict(size=16, family="Arial"),
+    showgrid=False,
+    zeroline=False
+)
+fig_box.update_yaxes(
+    title="Margen de utilidad",
+    title_font=dict(size=16, family="Arial"),
+    showgrid=False,
+    zeroline=False
+)
 
 fig_box.update_layout(
     title="A mayor descuento, mayor dispersión y más riesgo de margen negativo",
