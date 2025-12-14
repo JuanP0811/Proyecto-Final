@@ -148,7 +148,7 @@ with exp4:
 st.markdown("---")
 
 # ---- GRÁFICO 1: Sales & Profit por Categoría (barras) ----
-st.subheader("Las categorías con mayores ventas no implica mejor utilidad")
+st.subheader("El volumen de ventas no garantiza utilidad: Furniture vende, pero no rentabiliza")
 
 cat_group = (
     filtered
@@ -250,7 +250,7 @@ Office Suplies y Furniture parecen tener ventas similares pero al evaluar la uti
 st.markdown("---")
 
 # ---- GRÁFICO 2: Sales & Profit por Sub-Category (barras horizontales) ----
-st.subheader("Tres subcategorías presentan pérdidas significativas")
+st.subheader("Tres subcategorías presentan pérdidas significativas, la más fuerte es de Tables")
 # Agrupamos y ordenamos por Profit
 sub_group = (
     filtered
@@ -311,7 +311,7 @@ st.plotly_chart(fig_sub, use_container_width=True)
 st.markdown("---")
 
 # ---- GRÁFICO 3: Discount vs Profit (scatter) ----
-st.subheader("Relación entre descuento y utilidad por línea de pedido")
+st.subheader(" A mayor descuento, mayor probabilidad de pérdida por línea de pedido")
 fig_bubble = px.scatter(
     filtered,
     x="Discount",
@@ -365,7 +365,7 @@ st.markdown("Un mayor nivel de descuento no implica necesariamente una utilidad 
 st.markdown("---")
 
 ## ---- GRÁFICO 4: Evolución mensual (línea) ----
-st.subheader("La verdadera dinámica mensual entre ingresos y rentabilidad")
+st.subheader("Vender más a lo largo del tiempo no ha garantizado mayor rentabilidad")
 
 # Agrupar usando la nueva columna Date
 time_group = (
@@ -492,7 +492,7 @@ Los descuentos agresivos aumentan ventas, pero sacrifican rentabilidad.""")
 st.markdown("---")
 
 # ---- GRÁFICO 5: Profit Margin por Discount Bucket (boxplot) ----
-st.subheader("Rentabilidad según el nivel de descuento aplicado")
+st.subheader("A partir del 20–40% de descuento, la rentabilidad se deteriora de forma sistemática")
 
 # Orden de los buckets
 bucket_order = ["0%", "0–20%", "20–40%", "40–60%", "60–100%"]
@@ -616,7 +616,7 @@ En los rangos de descuento más agresivos (40–60% y 60–100%) la totalidad de
 st.markdown("---")
 
 # ---- GRÁFICO 6: Top 10 productos por venta (treemap) ----
-st.subheader("Top productos por ventas")
+st.subheader("La rentabilidad se concentra en pocos productos, principalmente en Technology")
 
 prod_group = (
     filtered
